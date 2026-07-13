@@ -34,7 +34,7 @@
             <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="20" cy="20" r="9"/><circle cx="20" cy="20" r="14" stroke-dasharray="2 4"/></svg>
           </span>
           <h1 class="hero-title">
-            <span id="hoc">Head of Content</span> <em id="accent">Narratives that scale</em>
+            <span id="hoc">Building content engines and</span> <em id="accent">narratives that scale</em>
           </h1>
         </section>
 
@@ -104,21 +104,6 @@
 </div>
 
 <script>
-  function fitAccent() {
-    var hoc = document.getElementById('hoc');
-    var accent = document.getElementById('accent');
-    if (!hoc || !accent) return;
-    accent.style.fontSize = '';
-    var targetWidth = hoc.getBoundingClientRect().width * 1.1;
-    var naturalWidth = accent.getBoundingClientRect().width;
-    var baseFontSize = parseFloat(getComputedStyle(accent).fontSize);
-    if (naturalWidth > 0 && baseFontSize > 0) {
-      accent.style.fontSize = (baseFontSize * (targetWidth / naturalWidth)) + 'px';
-    }
-  }
-  window.addEventListener('load', fitAccent);
-  window.addEventListener('resize', fitAccent);
-
   function fitCaption() {
     var cap = document.getElementById('workCaption');
     if (!cap) return;
