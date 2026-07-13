@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gioele Lamorgia — Head of Content</title>
+<meta name="description" content="Portfolio di Gioele Lamorgia, Head of Content.">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/geist-sans/index.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/geist-mono/index.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/geist-mono/700.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <header class="card header">
+    <a href="#top" class="logo">GIOELE <span>LAMORGIA</span></a>
+    <nav class="nav">
+      <a href="#work">WORK</a>
+      <a href="#about">ABOUT</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+  </header>
+
+  <!-- BENTO: left stack (hero/about, portrait/contact) + right column (work/socials) -->
+  <div class="bento">
+
+    <div class="bento-left">
+      <div class="row-top">
+        <section class="card hero" id="top">
+          <span class="hero-icon">
+            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="20" cy="20" r="9"/><circle cx="20" cy="20" r="14" stroke-dasharray="2 4"/></svg>
+          </span>
+          <h1 class="hero-title">
+            <span id="hoc">Head of Content</span> <em id="accent">Narratives that scale</em>
+          </h1>
+        </section>
+
+        <section class="card portrait">
+          <img src="assets/portrait.jpg" alt="">
+        </section>
+      </div>
+
+      <div class="row-bottom">
+        <section class="card about" id="about">
+          <span class="about-icon">
+            <img src="assets/feather-icon-cropped.png" alt="">
+          </span>
+          <p>
+            Gioele è un Head of Content ed esperto di marketing editoriale, specializzato nel trasformare strategie di contenuto complesse in crescita misurabile.
+          </p>
+        </section>
+
+        <section class="card contact" id="contact">
+          <div class="contact-top">
+            <span class="contact-question">Got a story to tell?</span>
+            <span class="arrow-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 17L17 7M9 7h8v8"/></svg>
+            </span>
+          </div>
+          <a href="mailto:gioele.lamorgia@gmail.com" class="contact-title">Contact me</a>
+        </section>
+      </div>
+    </div>
+
+    <div class="bento-right">
+      <section class="card work" id="work">
+        <a href="#" class="work-item work-item-featured">
+          <div class="work-item-top">
+            <span class="work-item-title">Utexo</span>
+            <span class="work-arrow">
+              <svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 19L19 7M9 7h10v10"/></svg>
+            </span>
+          </div>
+          <div class="work-item-image"><img src="assets/utexo-work-image.jpg" alt="Utexo — Bringing USDT back home to Bitcoin"></div>
+          <p class="work-item-caption" id="workCaption">Bringing USDT back home to Bitcoin</p>
+        </a>
+
+        <a href="#" class="work-item">
+          <span class="work-item-title">Sharding Capital</span>
+        </a>
+
+        <a href="#" class="work-item">
+          <span class="work-item-title">ChainEye Research</span>
+        </a>
+
+        <a href="#" class="work-item work-item-last">
+          <span class="work-item-title">Messari Hub</span>
+        </a>
+      </section>
+
+      <footer class="card socials">
+        <nav class="socials-links">
+          <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="#" target="_blank" rel="noopener">X</a>
+        </nav>
+      </footer>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+  function fitAccent() {
+    var hoc = document.getElementById('hoc');
+    var accent = document.getElementById('accent');
+    if (!hoc || !accent) return;
+    accent.style.fontSize = '';
+    var targetWidth = hoc.getBoundingClientRect().width * 1.1;
+    var naturalWidth = accent.getBoundingClientRect().width;
+    var baseFontSize = parseFloat(getComputedStyle(accent).fontSize);
+    if (naturalWidth > 0 && baseFontSize > 0) {
+      accent.style.fontSize = (baseFontSize * (targetWidth / naturalWidth)) + 'px';
+    }
+  }
+  window.addEventListener('load', fitAccent);
+  window.addEventListener('resize', fitAccent);
+
+  function fitCaption() {
+    var cap = document.getElementById('workCaption');
+    if (!cap) return;
+    cap.style.fontSize = '';
+    var natural = cap.scrollWidth;
+    var available = cap.clientWidth;
+    var base = parseFloat(getComputedStyle(cap).fontSize);
+    if (natural > available && natural > 0 && base > 0) {
+      cap.style.fontSize = (base * (available / natural) * 0.98) + 'px';
+    }
+  }
+  window.addEventListener('load', fitCaption);
+  window.addEventListener('resize', fitCaption);
+</script>
+</body>
+</html>
