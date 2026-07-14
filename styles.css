@@ -267,13 +267,12 @@ a { color: inherit; text-decoration: none; }
 }
 .socials-links {
   display: flex;
-  gap: 32px;
-  font-family: "Geist Mono", monospace;
-  font-size: 13px;
-  letter-spacing: 0.02em;
+  align-items: center;
+  gap: 28px;
 }
-.socials-links a { opacity: 0.8; }
+.socials-links a { display: flex; opacity: 0.8; }
 .socials-links a:hover { opacity: 1; }
+.socials-links svg { width: 21px; height: 21px; display: block; }
 
 /* RESPONSIVE */
 @media (max-width: 980px) {
