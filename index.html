@@ -106,6 +106,31 @@
 </div>
 
 <script>
+  function fitHeroTitle() {
+    var title = document.querySelector('.hero-title');
+    if (!title) return;
+    function countLines(px) {
+      title.style.fontSize = px + 'px';
+      var range = document.createRange();
+      range.selectNodeContents(title);
+      var rects = Array.prototype.filter.call(range.getClientRects(), function (r) { return r.width > 0; });
+      var tops = [];
+      for (var i = 0; i < rects.length; i++) {
+        var t = Math.round(rects[i].top);
+        if (tops.indexOf(t) === -1) tops.push(t);
+      }
+      return tops.length;
+    }
+    var lo = 22, hi = 56, best = lo;
+    while (lo <= hi) {
+      var mid = Math.floor((lo + hi) / 2);
+      if (countLines(mid) <= 3) { best = mid; lo = mid + 1; } else { hi = mid - 1; }
+    }
+    title.style.fontSize = best + 'px';
+  }
+  window.addEventListener('load', fitHeroTitle);
+  window.addEventListener('resize', fitHeroTitle);
+
   function fitCaption() {
     var cap = document.getElementById('workCaption');
     if (!cap) return;
