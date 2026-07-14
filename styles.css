@@ -98,8 +98,9 @@ a { color: inherit; text-decoration: none; }
   min-height: 420px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
+.hero-spacer-top { flex-grow: 225; }
+.hero-spacer-bottom { flex-grow: 86; }
 .hero-icon {
   position: absolute;
   top: var(--pad);
