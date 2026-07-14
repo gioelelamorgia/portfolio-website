@@ -103,9 +103,9 @@ a { color: inherit; text-decoration: none; }
 .hero-spacer-bottom { flex-grow: 86; }
 .hero-icon {
   position: absolute;
-  top: 7.1%;
-  right: 5.3%;
-  width: 21%;
+  top: 6%;
+  right: 5%;
+  width: 30%;
   aspect-ratio: 1 / 1;
   color: var(--secondary);
 }
