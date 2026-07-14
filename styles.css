@@ -126,6 +126,9 @@ a { color: inherit; text-decoration: none; }
   font-style: italic;
   font-weight: 400;
 }
+.grow-scale {
+  font-family: "Geist Sans", "Inter", sans-serif;
+}
 
 /* PORTRAIT */
 .portrait {
