@@ -35,7 +35,7 @@
           </span>
           <div class="hero-spacer-top"></div>
           <h1 class="hero-title">
-            Content Engines for<br><em>Narratives</em> that scale
+            Content Engines for<br><em>Narratives</em> that <span class="grow-scale"><span style="font-size:0.8em">s</span><span style="font-size:0.95em">c</span><span style="font-size:1.1em">a</span><span style="font-size:1.3em">l</span><span style="font-size:1.55em">e</span></span>
           </h1>
           <div class="hero-spacer-bottom"></div>
         </section>
@@ -109,23 +109,17 @@
   function fitHeroTitle() {
     var title = document.querySelector('.hero-title');
     if (!title) return;
-    function countLines(px) {
+    function fitsOnItsLines(px) {
       title.style.fontSize = px + 'px';
-      var range = document.createRange();
-      range.selectNodeContents(title);
-      var rects = Array.prototype.filter.call(range.getClientRects(), function (r) { return r.width > 0; });
-      var tops = [];
-      for (var i = 0; i < rects.length; i++) {
-        var t = Math.round(rects[i].top);
-        if (tops.indexOf(t) === -1) tops.push(t);
-      }
-      return tops.length;
+      title.style.whiteSpace = 'nowrap';
+      var overflow = title.scrollWidth > title.clientWidth + 0.5;
+      title.style.whiteSpace = '';
+      return !overflow;
     }
-    var maxLines = title.querySelectorAll('br').length + 1;
     var lo = 22, hi = 56, best = lo;
     while (lo <= hi) {
       var mid = Math.floor((lo + hi) / 2);
-      if (countLines(mid) <= maxLines) { best = mid; lo = mid + 1; } else { hi = mid - 1; }
+      if (fitsOnItsLines(mid)) { best = mid; lo = mid + 1; } else { hi = mid - 1; }
     }
     title.style.fontSize = best + 'px';
   }
