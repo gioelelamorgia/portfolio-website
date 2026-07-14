@@ -103,11 +103,16 @@ a { color: inherit; text-decoration: none; }
 .hero-spacer-bottom { flex-grow: 86; }
 .hero-icon {
   position: absolute;
-  top: var(--pad);
-  right: var(--pad);
-  width: 40px;
-  height: 40px;
+  top: 7.1%;
+  right: 5.3%;
+  width: 21%;
+  aspect-ratio: 1 / 1;
   color: var(--secondary);
+}
+.hero-icon svg {
+  display: block;
+  width: 100%;
+  height: 100%;
   opacity: 0.6;
 }
 .hero-title {
