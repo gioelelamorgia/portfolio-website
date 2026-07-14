@@ -35,7 +35,7 @@
           </span>
           <div class="hero-spacer-top"></div>
           <h1 class="hero-title">
-            Content Engines<br>and <em>Narratives</em><br>built to scale
+            Content Engines<br>for <em>Narratives</em> that scale
           </h1>
           <div class="hero-spacer-bottom"></div>
         </section>
@@ -121,10 +121,11 @@
       }
       return tops.length;
     }
+    var maxLines = title.querySelectorAll('br').length + 1;
     var lo = 22, hi = 56, best = lo;
     while (lo <= hi) {
       var mid = Math.floor((lo + hi) / 2);
-      if (countLines(mid) <= 3) { best = mid; lo = mid + 1; } else { hi = mid - 1; }
+      if (countLines(mid) <= maxLines) { best = mid; lo = mid + 1; } else { hi = mid - 1; }
     }
     title.style.fontSize = best + 'px';
   }
