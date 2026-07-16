@@ -280,6 +280,112 @@ a { color: inherit; text-decoration: none; }
 .socials-links a:hover { opacity: 1; }
 .socials-links svg { width: 21px; height: 21px; display: block; }
 
+/* CASE STUDY PAGES (shared) */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  opacity: 0.7;
+  margin-bottom: 4px;
+}
+.back-link:hover { opacity: 1; }
+
+.case-hero {
+  padding: var(--pad);
+}
+.case-hero-title {
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+.case-hero-subtitle {
+  font-size: 18px;
+  opacity: 0.75;
+  margin: 0;
+  max-width: 640px;
+}
+
+.case-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: var(--gap);
+}
+.case-stat {
+  padding: var(--pad);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.case-stat-value {
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 700;
+  color: var(--secondary);
+}
+.case-stat-label {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.case-body {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: var(--gap);
+  align-items: start;
+}
+.case-sidebar {
+  position: sticky;
+  top: 24px;
+  padding: var(--pad);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.case-sidebar a {
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 14px;
+  opacity: 0.7;
+}
+.case-sidebar a:hover { opacity: 1; background: rgba(63,107,106,0.1); }
+
+.case-section {
+  padding: var(--pad);
+  margin-bottom: var(--gap);
+}
+.case-section h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 12px;
+}
+.case-section p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0 0 12px;
+}
+.case-placeholder {
+  border: 1px dashed rgba(28,34,34,0.3);
+  border-radius: 12px;
+  padding: 16px;
+  font-size: 14px;
+  opacity: 0.6;
+  font-style: italic;
+}
+
+.simple-case-card {
+  padding: var(--pad);
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+
+@media (max-width: 780px) {
+  .case-body { grid-template-columns: 1fr; }
+  .case-sidebar { position: static; flex-direction: row; flex-wrap: wrap; }
+}
+
 /* RESPONSIVE */
 @media (max-width: 980px) {
   .bento { grid-template-columns: 1fr; }
