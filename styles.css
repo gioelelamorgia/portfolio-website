@@ -219,7 +219,6 @@ a { color: inherit; text-decoration: none; }
   padding: var(--pad);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 .work-item {
   display: block;
