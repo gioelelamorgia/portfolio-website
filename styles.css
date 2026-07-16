@@ -139,6 +139,19 @@ a { color: inherit; text-decoration: none; }
 .deco-mark svg { width: 35px; height: 28px; }
 .card-current .card-heading { max-width: 241px; }
 
+/* IMAGE CARDS (2 + 4) */
+.card-image { padding: 0; }
+.card-fill {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.card-casestudy { padding: 36px; }
+.card-casestudy .casestudy-head { position: relative; z-index: 2; }
+
 /* CARD 4 — CASE STUDY */
 .casestudy-title-row {
   display: flex;
