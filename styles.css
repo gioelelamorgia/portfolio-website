@@ -1,7 +1,8 @@
 :root {
   --card-grad: linear-gradient(180deg, #C9C9C9 0%, #000000 100%);
   --radius: 20px;
-  --gap: 20px;
+  --gap-h: 17px;
+  --gap-v: 21px;
   --text-full: #FFFFFF;
   --text-70: rgba(255, 255, 255, 0.70);
   --text-75: rgba(255, 255, 255, 0.75);
@@ -22,7 +23,7 @@ a { color: inherit; text-decoration: none; }
 
 .page {
   min-height: 100vh;
-  padding: 40px 45px 32px;
+  padding: 40px 47px 32px;
   display: flex;
   flex-direction: column;
 }
@@ -30,7 +31,7 @@ a { color: inherit; text-decoration: none; }
 /* TOPBAR */
 .topbar {
   width: 100%;
-  max-width: 1142px;
+  max-width: 1139px;
   margin: 0 auto 48px;
   display: flex;
   align-items: center;
@@ -46,19 +47,19 @@ a { color: inherit; text-decoration: none; }
 /* BENTO GRID */
 .bento {
   width: 100%;
-  max-width: 1142px;
+  max-width: 1139px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: var(--gap);
+  gap: var(--gap-v);
 }
 .row {
   display: grid;
-  gap: var(--gap);
+  gap: var(--gap-h);
 }
-.row-1 { grid-template-columns: 721fr 401fr; aspect-ratio: 1142 / 392; }
-.row-2 { grid-template-columns: 450fr 672fr; aspect-ratio: 1142 / 463; }
-.row-3 { grid-template-columns: 721fr 401fr; aspect-ratio: 1142 / 356; }
+.row-1 { grid-template-columns: 721fr 401fr; aspect-ratio: 1139 / 392; }
+.row-2 { grid-template-columns: 450fr 672fr; aspect-ratio: 1139 / 463; }
+.row-3 { grid-template-columns: 721fr 401fr; aspect-ratio: 1139 / 356; }
 
 /* CARD BASE */
 .card {
@@ -187,8 +188,8 @@ a { color: inherit; text-decoration: none; }
   gap: 16px;
   box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.05);
 }
-.wp-back  { height: 68.8%; z-index: 1; background: linear-gradient(rgba(0,0,0,0.08), rgba(0,0,0,0.08)), var(--card-grad); }
-.wp-mid   { height: 51.1%; z-index: 2; background: linear-gradient(rgba(0,0,0,0.04), rgba(0,0,0,0.04)), var(--card-grad); }
+.wp-back  { height: 68.8%; z-index: 1; }
+.wp-mid   { height: 51.1%; z-index: 2; }
 .wp-front { height: 34.0%; z-index: 3; }
 .work-name {
   font-size: 24px;
@@ -208,7 +209,7 @@ a { color: inherit; text-decoration: none; }
 /* FOOTER */
 .madeby {
   width: 100%;
-  max-width: 1142px;
+  max-width: 1139px;
   margin: 40px auto 0;
   text-align: center;
   font-size: 20px;
