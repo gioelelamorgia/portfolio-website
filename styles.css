@@ -149,17 +149,17 @@ a { color: inherit; text-decoration: none; }
   object-fit: cover;
   display: block;
 }
-.card-casestudy { padding: 36px; }
+.card-casestudy { padding: 34px 36px 36px 43px; }
 .card-casestudy .casestudy-head { position: relative; z-index: 2; }
 
 /* CARD 4 — CASE STUDY */
 .casestudy-title-row {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 21px;
 }
 .casestudy-sub {
-  margin: 10px 0 0;
+  margin: 8px 0 0;
   font-size: 16px;
   line-height: 17px;
   color: var(--text-75);
