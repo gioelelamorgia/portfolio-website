@@ -129,14 +129,9 @@ a { color: inherit; text-decoration: none; }
 .glass-arrow svg { width: 11px; height: 11px; }
 
 /* CARD 1 — HERO */
-.card-hero { justify-content: space-between; }
-.hero-top {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 20px;
-}
-.hero-icons { display: flex; gap: 10px; flex-shrink: 0; }
+.card-hero { position: relative; justify-content: space-between; padding: 36px 44px 34px 44px; }
+.hero-icons { position: absolute; top: 48px; right: 77px; display: flex; gap: 10px; }
+.card-hero .card-body { max-width: 380px; }
 
 /* CARD 3 — CURRENT */
 .card-current { justify-content: space-between; }
