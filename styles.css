@@ -168,6 +168,7 @@ a { color: inherit; text-decoration: none; }
   align-items: center;
   gap: 21px;
 }
+.casestudy-title-row .glass-arrow { align-self: flex-start; margin-top: 11px; }
 .casestudy-sub {
   margin: 8px 0 0;
   font-size: 16px;
