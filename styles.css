@@ -202,7 +202,8 @@ a { color: inherit; text-decoration: none; }
 .work-panel .glass-arrow { margin-top: 3px; }
 
 /* CARD 6 — CONTACT */
-.card-contact { justify-content: space-between; }
+.card-contact { justify-content: space-between; padding: 24px 30px 29px 30px; }
+.card-contact .card-body { max-width: 220px; }
 
 .heart { color: #ff4d4d; }
 
