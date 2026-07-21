@@ -167,7 +167,7 @@ a { color: inherit; text-decoration: none; }
 
 /* CARD 5 — WORK LIST (stacked, bottom-anchored panels per spec 245/182/121 of 356) */
 .card-work { padding: 0; }
-.work-title { position: absolute; top: 36px; left: 36px; right: 36px; z-index: 20; }
+.work-title { position: absolute; top: 30px; left: 44px; right: 44px; z-index: 20; }
 .work-stack { position: absolute; inset: 0; }
 .work-panel {
   position: absolute;
@@ -176,7 +176,7 @@ a { color: inherit; text-decoration: none; }
   bottom: 0;
   background: var(--card-grad);
   border-radius: 20px;
-  padding: 18px 30px;
+  padding: 16px 24px 18px 26px;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
