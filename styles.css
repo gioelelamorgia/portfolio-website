@@ -8,7 +8,7 @@
 @font-face { font-family: "PP Mori"; font-weight: 900; font-style: italic; font-display: swap; src: url("assets/fonts/PPMori-BlackItalic.otf") format("opentype"); }
 
 :root {
-  --card-grad: linear-gradient(180deg in srgb-linear, #C9C9C9 0%, #000000 100%);
+  --card-grad: linear-gradient(180deg, #C9C9C9 0%, #000000 100%);
   --radius: 20px;
   --gap-h: 17px;
   --gap-v: 21px;
