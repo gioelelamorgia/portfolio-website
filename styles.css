@@ -1,3 +1,12 @@
+@font-face { font-family: "PP Mori"; font-weight: 200; font-style: normal; font-display: swap; src: url("assets/fonts/PPMori-Extralight.otf") format("opentype"); }
+@font-face { font-family: "PP Mori"; font-weight: 200; font-style: italic; font-display: swap; src: url("assets/fonts/PPMori-ExtralightItalic.otf") format("opentype"); }
+@font-face { font-family: "PP Mori"; font-weight: 400; font-style: normal; font-display: swap; src: url("assets/fonts/PPMori-Regular.otf") format("opentype"); }
+@font-face { font-family: "PP Mori"; font-weight: 400; font-style: italic; font-display: swap; src: url("assets/fonts/PPMori-Italic.otf") format("opentype"); }
+@font-face { font-family: "PP Mori"; font-weight: 600; font-style: normal; font-display: swap; src: url("assets/fonts/PPMori-Semibold.otf") format("opentype"); }
+@font-face { font-family: "PP Mori"; font-weight: 600; font-style: italic; font-display: swap; src: url("assets/fonts/PPMori-SemiboldItalic.otf") format("opentype"); }
+@font-face { font-family: "PP Mori"; font-weight: 900; font-style: normal; font-display: swap; src: url("assets/fonts/PPMori-Black.otf") format("opentype"); }
+@font-face { font-family: "PP Mori"; font-weight: 900; font-style: italic; font-display: swap; src: url("assets/fonts/PPMori-BlackItalic.otf") format("opentype"); }
+
 :root {
   --card-grad: linear-gradient(180deg, #C9C9C9 0%, #000000 100%);
   --radius: 20px;
