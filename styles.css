@@ -147,6 +147,7 @@ a { color: inherit; text-decoration: none; }
 /* CARD 3 — CURRENT */
 .card-current { justify-content: space-between; padding: 33px 30px 29px 43px; }
 .current-name { display: block; color: #fff; font-size: 64px; line-height: 100%; margin-top: 9px; }
+.current-role { display: block; color: var(--text-70); font-size: 24px; line-height: 100%; margin-top: 12px; }
 .deco-mark { align-self: flex-end; display: inline-flex; }
 .deco-mark img { display: block; width: 35px; height: 28px; }
 
